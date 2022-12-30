@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            background: rgb(20, 20, 20);
+        }
+        div.area{
+            background-color: rgb(50, 200, 50);
+            width: 200px;
+            height: 200px;
+
+            font: normal 20pt Verdana;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    <div
+    class="area"
+    onclick="clicar()"
+    onmouseenter="entrar()"
+    onmouseout="sair()">
+        Interaja!
+    </div>
+    -->
+
+    <div class="area">Interaja!</div>
+
+    <script>
+        var area = document.querySelector('div.area')
+
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            area.innerText = 'Clicou'
+            area.style.background = 'rgb(200, 50, 50)'
+        }
+
+        function entrar(){
+            area.innerText = 'Entrou'
+            area.style.background = 'rgb(200, 200, 50)'
+        }
+
+        function sair(){
+            area.innerText = 'Saiu'
+            area.style.background = 'rgb(50, 200, 50)'
+        }
+    </script>
+</body>
+
+</html>

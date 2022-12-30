@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <h1>Praticando DOM</h1>
+    <p>Prática com <strong>DOM</strong> feito no curso de Javascript do Curso em Vídeo</p>
+    <p name="teste">Parágrafo aleatório</p>
+    <div id="container">Clique aqui</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+        var d = document.getElementById('container')
+        var t = document.getElementsByName('teste')[0]
+        var qs = document.querySelector('div#container')
+
+        document.writeln('<p>' + p1.innerHTML + '</p>')
+        document.writeln('<p>' + p2.innerText + '</p>')
+        document.writeln('<p>' + t.innerText + '</p>')
+        d.innerText = 'Mudando o texto'
+        qs.style.background = 'yellow'
+    </script>
+</body>
+
+</html>

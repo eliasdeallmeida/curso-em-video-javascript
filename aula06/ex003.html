@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados</title>
+    <style>
+        body{
+            font: normal 16pt Arial;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var nome = window.prompt('Informe seu nome:')
+        document.writeln('<p>Olá, <strong>', nome, '</strong>! É um prazer te conhecer!</p>')
+        document.writeln('<p>Seu nome tem ', nome.length, ' letras</p>')
+        document.writeln('<p>Seu nome com letras maiúsculas é ', nome.toUpperCase(), '</p>')
+        document.writeln('<p>Seu nome com letras minúsculas é ', nome.toLowerCase(), '</p>')
+        
+        var num = Number(window.prompt('Digite um valor:'))
+        document.writeln('<p>O valor digitado foi ', num.toString(), '</p>')
+        document.writeln('<p>Seu valor com casa decimal formatada vale ' + num.toFixed(1), '</p>')
+        document.writeln('<p>Seu valor formatado em moeda vale ' + num.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}), '</p>')
+    </script>
+</body>
+
+</html>
